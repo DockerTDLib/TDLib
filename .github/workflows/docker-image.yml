@@ -55,4 +55,4 @@ jobs:
           docker buildx build --load --build-arg dname="arm64v8" --platform "${{ matrix.arch-run-names }}" -t tdlib:linux_"${{ matrix.arch-image-names }}" . -f linux/Dockerfile
       - name: Push Docker Image
         run: |
-          docker push tdlib:linux_"${{ matrix.arch-image-names }}"
+          docker push laky64/tdlib:linux_"${{ matrix.arch-image-names }}"
