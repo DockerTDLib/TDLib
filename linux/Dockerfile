@@ -17,4 +17,4 @@ RUN git clone https://github.com/tdlib/td.git && \
     mkdir build && \
     cd build && \
     cmake -DCMAKE_BUILD_TYPE=Release .. && \
-    cmake --build . --target install
+    cmake --build . --target install -j$(nproc)
