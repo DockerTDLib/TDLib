@@ -1,7 +1,7 @@
 name: Build Docker Images
 on:
   push:
-    branches: [ master]
+    branches: [ main ]
     paths-ignore:
       - '.gitignore'
       - '.docker-image.yaml'
