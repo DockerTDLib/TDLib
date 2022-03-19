@@ -2,7 +2,7 @@ ARG dname="arm64v8"
 FROM ${dname}/golang:buster
 RUN apt update
 RUN apt upgrade -y
-RUN apt install make git zlib1g-dev libssl-dev gperf php-cli cmake clang libc++-dev libc++abi-dev -y
+RUN apt install make git zlib1g-dev libssl-dev gperf cmake clang libc++-dev libc++abi-dev -y
 RUN git clone https://github.com/tdlib/td.git && \
     cd td && \
     mkdir build && \
