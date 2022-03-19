@@ -55,4 +55,4 @@ jobs:
           images: laky64/tdlib
       - name: Push Docker Image
         run: |
-          docker push laky64/tdlib:linux_"${{ matrix.arch-image-names }}"
+          docker push laky64/tdlib:linux-"${{ matrix.arch-image-names }}"
