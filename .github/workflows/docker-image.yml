@@ -52,7 +52,7 @@ jobs:
           sudo systemctl restart docker
       - name: Build Docker Image
         run: |
-          docker buildx build --load --build-arg dname="arm64v8" --platform "${{ matrix.arch-run-names }}" -t laky64/tdlib:linux_"${{ matrix.arch-image-names }}" . -f linux/Dockerfile
+          docker buildx build --load --build-arg dname="${{ matrix.arch-image-names }}" --platform "${{ matrix.arch-run-names }}" -t laky64/tdlib:linux_"${{ matrix.arch-image-names }}" . -f linux/Dockerfile
       - name: Push Docker Image
         run: |
           docker push laky64/tdlib:linux_"${{ matrix.arch-image-names }}"
